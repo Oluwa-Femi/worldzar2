@@ -24676,10 +24676,12 @@ img.mfp-img {
 	display: block;
 	position: relative;
 	z-index: 2;
+	height: 40%;
 }
 
 .banner img {
 	width: 100%;
+	height: 40%;
 }
 
 @media (max-width: 1199.98px) {
@@ -24706,9 +24708,10 @@ img.mfp-img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    width: 80%; /* Adjust as needed */
+    width: 55%;
     padding: 20px;
-    margin: 0 auto; /* Center the grid container */
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .cardx {
@@ -24719,7 +24722,10 @@ img.mfp-img {
     padding: 20px;
     color: #fff;
     font-size: 1.2em;
-    background-color: #ccc; /* Default background color */
+    background-color: #ccc;
+    min-height: 150px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .cardx.kiwi { background-color: #a68c6e; }
@@ -24728,6 +24734,7 @@ img.mfp-img {
 .cardx.adoption { background-color: #3b83bd; }
 .cardx.startups { background-color: #7c6dc6; grid-column: 2; grid-row: 2; }
 .cardx.launches { background-color: #b56ddc; }
+
 
 
 .contentx {
@@ -24751,4 +24758,45 @@ img.mfp-img {
     color: #555;
     font-size: 1.1em;
     line-height: 1.6em;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .containerx {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contentx {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .contentx h2 {
+        font-size: 1.2em;
+    }
+
+    .contentx h1 {
+        font-size: 1.5em;
+    }
+
+    .contentx p {
+        font-size: 1em;
+    }
+
+    .cardsx {
+        grid-template-columns: 1fr;
+        /* grid-template-rows: repeat(6, 1fr); */
+        width: 100%;
+        padding: 10px;
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .cardx {
+        font-size: 0.7em;
+        padding: 15px;
+    }
 }
